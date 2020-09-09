@@ -1,0 +1,37 @@
+{
+    "query": {
+        "bbox": {
+            "n": "10.0365",
+            "s": "9.8346",
+            "e": "-83.8507",
+            "w": "-84.2418"
+        },
+        "tags": {
+          "route": "bus",
+          "operator": "Transportes Alpizar S.A.",
+          "public_transport:version": "2"
+        }
+    },
+    "stops": {
+      "name_without": "Parada sin nombre",
+      "name_auto": "no"
+    },
+    "agency": {
+      "agency_id": "CR-TransportesAlpizarSA",
+      "agency_name": "Transportes Alpizar S.A.",
+      "agency_url": "http://www.labexp.org",
+      "agency_timezone": "America/Costa_Rica",
+      "agency_lang": "ES",
+      "agency_phone": "506 24425606",
+      "agency_fare_url": ""
+    },
+    "feed_info": {
+      "publisher_name": "Laboratorio Experimental",
+      "publisher_url": "http://ic-itcr.ac.cr/~jgutierrez/incofer/",
+      "version": "0.1",
+      "start_date": "20200908"
+    },
+    "schedule_source": "data/schedule_alpizar.json",
+    "output_file": "data/cr-alpizar.zip",
+    "selector": "cr_gam"
+}
