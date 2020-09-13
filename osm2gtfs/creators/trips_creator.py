@@ -227,15 +227,15 @@ class TripsCreator(object):
                     schedule_stop_idx = trip_builder['stops'].index(itinerary_stop.name, search_idx)
                 except ValueError:
                     if itinerary_stop.get_parent_station() is not None:
-                        # If stop name not found, check for the parent_station name, too.
-                        itinerary_station = trip_builder[
-                            'all_stops']['stations'][str(itinerary_stop.get_parent_station())]
-                        if type(itinerary_station.name) is str:
-                            itinerary_station.name = itinerary_station.name
                         try:
+                            # If stop name not found, check for the parent_station name, too.
+                            itinerary_station = trip_builder[
+                                'all_stops']['stations'][str(itinerary_stop.get_parent_station())]
+                            if type(itinerary_station.name) is str:
+                                itinerary_station.name = itinerary_station.name
                             schedule_stop_idx = trip_builder[
                                 'stops'].index(itinerary_station.name, search_idx)
-                        except ValueError:
+                        except (KeyError, ValueError):
                             pass
 
                 # Make sure the last stop of itinerary will keep being the last stop in GTFS
